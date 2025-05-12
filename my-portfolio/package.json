@@ -2,6 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://adewale-1.github.io/myPortfolio",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@iconscout/unicons": "^4.2.0",
@@ -25,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@types/three": "^0.176.0"
+    "@types/three": "^0.176.0",
+    "gh-pages": "^6.3.0"
   }
 }

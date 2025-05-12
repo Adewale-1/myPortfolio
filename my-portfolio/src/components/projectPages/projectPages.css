@@ -60,30 +60,6 @@
   align-items: center;
 }
 
-.google-deepmind-header {
-  background-color: #1a73e8;
-  height: 160px;
-}
-
-.google-deepmind-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.google-logo {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
-
-.deepmind-text {
-  color: white;
-  font-size: 3rem;
-  font-weight: 400;
-  font-family: 'Product Sans', Arial, sans-serif;
-}
-
 .project-page__header-img-full {
   width: 100%;
   max-height: 100%;
@@ -224,25 +200,6 @@
   transition: all 0.3s ease;
   text-decoration: none;
   gap: 0.5rem;
-}
-
-.gsoc-link {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: none;
-  color: #333;
-  font-weight: 500;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-}
-
-.gsoc-link i {
-  font-size: 1.2rem;
-}
-
-.gsoc-link:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #000;
-  transform: translateY(-2px);
 }
 
 .project-page__link:hover {

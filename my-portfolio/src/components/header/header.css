@@ -1,0 +1,242 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Dark mode header styles */
+[data-theme="dark"] .header {
+  background-color: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  color: var(--primary-color);
+  font-weight: var(--font-medium);
+  transition: .3s;
+}
+
+.nav__logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.nav__logo:hover {
+  color: var(--primary-color);
+}
+
+.nav__logo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav__logo:hover::after {
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+}
+
+/* Active link */
+.active-link {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Change header style on scroll */
+.scroll-header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .scroll-header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 18, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Theme toggle button */
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.theme__toggle {
+  background: none;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme__toggle:hover {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__close,
+.nav__toggle {
+  display: none;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .header {
+    top: initial;
+    bottom: 0;
+    background-color: var(--body-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="dark"] .header {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav {
+    height: var(--header-height);
+  }
+
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 3rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem 1rem 0 0;
+    transition: bottom 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  [data-theme="dark"] .nav__menu {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show Menu */
+  .show-menu {
+    bottom: 0;
+  }
+
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--smaller-font-size);
+  }
+
+  .nav__icon {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav__close {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+
+  .nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .nav__menu {
+    padding: 2rem 0.25rem 3rem;
+  }
+
+  .nav__list {
+    column-gap: 0;
+  }
+} 

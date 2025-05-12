@@ -1,0 +1,308 @@
+.projects__categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 0 var(--mb-1-5);
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.projects__category h3 {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.projects__category h3::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  animation: cardShuffle 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-12px);
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+}
+
+.project__card:active {
+  transform: translateY(-8px);
+  transition: all 0.1s;
+}
+
+.project__img-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.project__img {
+  width: 100%;
+  max-width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.project__card:hover .project__img {
+  transform: scale(1.05);
+}
+
+.project__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  border-radius: 1.25rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.project__card:hover .project__card-overlay {
+  opacity: 1;
+}
+
+.project__clickable-hint {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .project__clickable-hint {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+}
+
+.project__card:hover .project__clickable-hint {
+  opacity: 1;
+}
+
+.project__card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.project__card:hover h4 {
+  color: var(--primary-color);
+}
+
+.project__card p {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@keyframes cardShuffle {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0) rotateY(-30deg) rotateX(15deg);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0) rotateX(0);
+  }
+}
+
+.project__modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.project__modal-content {
+  background: var(--container-color);
+  color: var(--text-color);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90vw;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0) rotateY(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0);
+  }
+}
+
+.project__modal-img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background: #eee;
+}
+
+.project__tech {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project__tech-item {
+  background: #f0f0f0;
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.project__link {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project__close {
+  background: #eee;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.project__close:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.project__more-images {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project__more-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+  .project__card {
+    padding: 1.25rem;
+  }
+  .project__modal-content {
+    padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .projects__categories {
+    padding: 0 var(--mb-1);
+  }
+}
+
+.project__view-btn {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: bottom 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.project__card:hover .project__view-btn {
+  bottom: 15px;
+}
+
+.project__view-btn:hover {
+  transform: translateX(-50%) scale(1.05);
+} 

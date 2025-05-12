@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Debug</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    pre {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      padding: 16px;
+      overflow: auto;
+    }
+    .info {
+      background-color: #e7f5fe;
+      border-left: 4px solid #0366d6;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    button {
+      background-color: #0366d6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #0353b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Portfolio Debug Page</h1>
+  
+  <div class="info">
+    This page helps diagnose routing issues with the portfolio site.
+  </div>
+  
+  <h2>Current URL Information</h2>
+  <pre id="url-info"></pre>
+  
+  <h2>Test Routing</h2>
+  <button id="test-home">Go to Home</button>
+  
+  <h2>Cache Control</h2>
+  <button id="clear-storage">Clear Local Storage</button>
+  
+  <h2>Test Links</h2>
+  <div id="test-links"></div>
+  
+  <h2>Navigation Test</h2>
+  <div id="test-navigation"></div>
+  
+  <script>
+    // Display URL info
+    function updateUrlInfo() {
+      const urlInfo = document.getElementById('url-info');
+      urlInfo.textContent = `Full URL: ${window.location.href}
+Origin: ${window.location.origin}
+Pathname: ${window.location.pathname}
+Hash: ${window.location.hash}
+Search: ${window.location.search}`;
+    }
+    
+    updateUrlInfo();
+    
+    // Set up button handlers
+    document.getElementById('test-home').addEventListener('click', () => {
+      window.location.href = `${window.location.origin}${window.location.pathname.replace('debug.html', '')}`;
+    });
+    
+    document.getElementById('clear-storage').addEventListener('click', () => {
+      localStorage.clear();
+      sessionStorage.clear();
+      alert('Local storage and session storage cleared!');
+    });
+    
+    // Update URL info when hash changes
+    window.addEventListener('hashchange', updateUrlInfo);
+
+    function testRoutes() {
+      console.log('Testing routes...');
+      
+      // Test links
+      document.getElementById('test-links').innerHTML = `
+        <h3>Test Links</h3>
+        <p>Click these links to test routing:</p>
+        <div class="link-grid">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      `;
+      
+      // Navigation test
+      document.getElementById('test-navigation').innerHTML = `
+        <h3>Navigation Test</h3>
+        <p>Try different navigation patterns:</p>
+        <div class="btn-grid">
+          <button onclick="window.location.href = '${window.location.origin}${window.location.pathname.replace('debug.html', '')}'">Main Page</button>
+          <button onclick="window.location.href = '${window.location.origin}${window.location.pathname.replace('debug.html', '')}#about'">About Section</button>
+          <button onclick="window.history.back()">Back</button>
+          <button onclick="window.history.forward()">Forward</button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html> 

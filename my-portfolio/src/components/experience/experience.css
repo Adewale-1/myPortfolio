@@ -73,8 +73,13 @@
 }
 
 .experience__calendar {
-  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-1);
+  font-size: var(--small-font-size);
   color: var(--text-color-light);
+}
+
+.experience__calendar i {
+  margin-right: 0.25rem;
 }
 
 .experience__description {
@@ -105,57 +110,17 @@
 }
 
 .experience__company-logo {
-  width: 32px;
-  height: 32px;
-  margin-right: 0.75rem;
-  object-fit: contain;
+  height: 20px;
+  width: auto;
+  margin-right: 0.5rem;
   vertical-align: middle;
 }
 
-.experience__clickable {
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.experience__clickable::after {
-  content: '\f08e';
-  font-family: 'unicons';
-  position: absolute;
-  top: 0.25rem;
-  right: -1.25rem;
-  font-size: 0.85rem;
+.experience__company-icon {
+  font-size: 1.2rem;
   color: var(--primary-color);
-  opacity: 0.7;
-  transition: all 0.3s ease;
-}
-
-.experience__clickable:hover {
-  color: var(--primary-color);
-  transform: translateX(3px);
-}
-
-.experience__clickable:hover::after {
-  opacity: 1;
-  transform: translateX(3px);
-}
-
-.experience__clickable-badge {
-  position: absolute;
-  top: -8px;
-  right: -30px;
-  background-color: rgba(var(--primary-color-rgb), 0.1);
-  color: var(--primary-color);
-  font-size: 0.65rem;
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.experience__clickable:hover .experience__clickable-badge {
-  opacity: 1;
-  background-color: rgba(var(--primary-color-rgb), 0.2);
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 /* BREAKPOINTS */

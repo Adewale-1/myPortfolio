@@ -17,7 +17,7 @@ export const projects: ProjectType[] = [
     category: 'Software',
     description: 'A modern web-based code editor with integrated AI assistance. CodeOH provides a feature-rich development environment with syntax highlighting, smart code completion, and real-time execution capabilities across multiple programming languages. The system integrates with Google\'s Gemini LLM to provide intelligent code suggestions and powerful semantic search functionality.',
     github: 'https://github.com/addychandrashekar/CodeOH',
-    image: '/assets/codeoh.png',
+    image: '/myPortfolio/assets/codeoh.png',
     features: [
       'Multi-language support with syntax highlighting',
       'Integrated AI assistant for code suggestions and problem-solving',
@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
     ],
     tech: ['React', 'Chakra UI', 'Monaco Editor', 'Node.js', 'Axios', 'Vite', 'PrimeReact', 'Styled Components', 'Python', 'FastAPI', 'Google Gemini', 'Supabase', 'SQL', 'Vector Embeddings'],
     moreImages: [
-      '/assets/codeoh.png'
+      '/myPortfolio/assets/codeoh.png'
     ],
     readmeContent: `
 # CodeOH
@@ -116,7 +116,7 @@ CodeOH is a comprehensive web-based integrated development environment (IDE) tha
     category: 'Machine Learning',
     description: 'A natural language to SQL query conversion system that explores both fine-tuning and in-context learning approaches. The project compares traditional encoder-decoder models (T5) with large language models (Gemma) using zero-shot, one-shot, and few-shot learning for translating natural language queries to SQL.',
     github: 'https://github.com/Adewale-1/Natural-Language-to-SQL',
-    image: '/assets/png/nl2sql.svg',
+    image: '/myPortfolio/assets/png/nl2sql.svg',
     features: [
       'T5 fine-tuning with encoder-decoder architecture',
       'In-context learning with Gemma 1.1 2B IT model',
@@ -128,8 +128,8 @@ CodeOH is a comprehensive web-based integrated development environment (IDE) tha
     ],
     tech: ['Python', 'PyTorch', 'Transformers', 'LLMs', 'SQL', 'Gemma', 'T5'],
     moreImages: [
-      '/assets/nl2sql.png',
-      '/assets/images/nl2sql-architecture.svg'
+      '/myPortfolio/assets/nl2sql.png',
+      '/myPortfolio/assets/images/nl2sql-architecture.svg'
     ],
     readmeContent: `
 # Text-to-SQL Generation with Language Models
@@ -205,7 +205,7 @@ The project demonstrates that while fine-tuned T5 models generally perform bette
     category: 'Machine Learning',
     description: 'A comprehensive NLP system for sentiment classification, implementing multiple approaches from classical machine learning to neural networks. The project explores both traditional (Logistic Regression) and modern neural approaches (Deep Averaging Network) for analyzing sentiment in text data.',
     github: 'https://github.com/Adewale-1/Linear-and-Neural-Sentiment-Classification',
-    image: '/assets/images/sentiment-architecture.svg',
+    image: '/myPortfolio/assets/images/sentiment-architecture.svg',
     features: [
       'Multiple model implementations (Logistic Regression, DAN)',
       'Advanced text preprocessing pipeline with TF-IDF weighting',
@@ -217,7 +217,7 @@ The project demonstrates that while fine-tuned T5 models generally perform bette
     ],
     tech: ['Python', 'PyTorch', 'NLTK', 'NumPy', 'scikit-learn', 'NLP', 'Word Embeddings'],
     moreImages: [
-      '/assets/images/sentiment-architecture.svg',
+      '/myPortfolio/assets/images/sentiment-architecture.svg',
     ],
     readmeContent: `
 # Sentiment Analysis NLP System
@@ -262,7 +262,7 @@ The system achieves solid performance on sentiment classification:
     category: 'Software',
     description: 'A DNA Origami Optimizer developed as part of NSF research at Ohio State University\'s Nanoengineering and Biodesign Laboratory. Orion provides researchers with tools to design, optimize, and analyze DNA nanostructures through advanced algorithms and an intuitive interface.',
     github: 'https://github.com/Adewale-1/Orion',
-    image: '/assets/images/orion-layout.png',
+    image: '/myPortfolio/assets/images/orion-layout.png',
     features: [
       'Bayesian optimization algorithms for DNA strand folding',
       'Scaffold sequence analysis and optimal routing',
@@ -274,8 +274,8 @@ The system achieves solid performance on sentiment classification:
     ],
     tech: ['Python', 'NumPy', 'SciPy', 'PyTorch', 'Molecular Dynamics', 'Bayesian Optimization', 'Qt', 'Bioinformatics'],
     moreImages: [
-      '/assets/images/orion-dna-optimization.svg',
-      '/assets/images/orion-layout.png'
+      '/myPortfolio/assets/images/orion-dna-optimization.svg',
+      '/myPortfolio/assets/images/orion-layout.png'
     ],
     readmeContent: `
 # Orion - DNA Origami Optimizer
@@ -355,7 +355,7 @@ The software has been used in several research contexts, including:
     category: 'Software',
     description: 'Open source contributions to the Pandas TA library for technical analysis, implementing the Smart Money Concept (SMC) indicator to identify institutional trading patterns and market imbalances, which helps traders detect potential price reversals and continuation signals.',
     github: 'https://github.com/Adewale-1/pandas-ta',
-    image: '/assets/images/pandas-ta-smc.svg',
+    image: '/myPortfolio/assets/images/pandas-ta-smc.svg',
     features: [
       'Smart Money Concept (SMC) implementation for identifying institutional trading patterns',
       'Detection of market imbalances and supply/demand zones',
@@ -368,7 +368,7 @@ The software has been used in several research contexts, including:
     tech: ['Python', 'Pandas', 'NumPy', 'Technical Analysis', 'Financial Markets', 'Data Science'],
     demo: 'https://github.com/Adewale-1/pandas-ta/blob/wale-contribution/pandas_ta/momentum/smc.py',
     moreImages: [
-      '/assets/images/pandas-ta-smc.svg'
+      '/myPortfolio/assets/images/pandas-ta-smc.svg'
     ],
     readmeContent: `
 # Smart Money Concept (SMC) Indicator
@@ -452,7 +452,7 @@ This contribution extends the pandas-ta library's momentum indicators, providing
     category: 'Software',
     description: 'A computer vision-based indoor navigation system designed for university buildings. IndoorNav uses image recognition to identify landmarks and guide users through complex indoor environments with a mobile-friendly interface and real-time routing.',
     github: 'https://github.com/Adewale-1/IndoorNav',
-    image: '/assets/png/indoornav.svg',
+    image: '/myPortfolio/assets/png/indoornav.svg',
     features: [
       'Computer vision-powered location recognition',
       'Waypoint-based navigation system',
@@ -464,9 +464,9 @@ This contribution extends the pandas-ta library's momentum indicators, providing
     ],
     tech: ['Python', 'Flutter', 'TensorFlow', 'Computer Vision', 'Mobile Development', 'Navigation Algorithms'],
     moreImages: [
-      '/assets/png/indoornav.svg',
-      '/assets/images/indoornav-waypoints.svg',
-      '/assets/images/indoornav-phone-mockup.svg'
+      '/myPortfolio/assets/png/indoornav.svg',
+      '/myPortfolio/assets/images/indoornav-waypoints.svg',
+      '/myPortfolio/assets/images/indoornav-phone-mockup.svg'
     ],
     readmeContent: `
 # IndoorNav
@@ -506,7 +506,7 @@ The system consists of three main components:
     category: 'Machine Learning',
     description: 'Implementation of transformer-based models for two NLP tasks: character-level language modeling and letter counting. The project features a custom transformer architecture with self-attention mechanisms, positional encoding, and multi-head attention to solve character-level sequence processing tasks.',
     github: 'https://github.com/Adewale-1/Transformer-Language-Modeling',
-    image: '/assets/png/transformer.svg',
+    image: '/myPortfolio/assets/png/transformer.svg',
     features: [
       'Custom transformer architecture with multi-head self-attention',
       'Character-level language modeling with causal masking',
@@ -519,8 +519,8 @@ The system consists of three main components:
     ],
     tech: ['Python', 'PyTorch', 'Transformers', 'NLP', 'Attention Mechanisms', 'Character-level Models'],
     moreImages: [
-      '/assets/png/transformer.svg',
-      '/assets/images/transformer-architecture.svg'
+      '/myPortfolio/assets/png/transformer.svg',
+      '/myPortfolio/assets/images/transformer-architecture.svg'
     ],
     readmeContent: `
 # NLP Transformer Implementation

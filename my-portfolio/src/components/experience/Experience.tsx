@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
                   <h3 className="experience__title">Incoming Software Engineering Intern</h3>
                   <span className="experience__subtitle">
                     <img 
-                      src="/assets/company-logos/chase-bank.png" 
+                      src="/myPortfolio/assets/company-logos/chase-bank.png" 
                       alt="JPMorgan Chase Logo" 
                       className="experience__company-logo"
                     />
@@ -81,7 +81,7 @@ const Experience: React.FC = () => {
                   </h3>
                   <span className="experience__subtitle">
                     <img 
-                      src="/assets/company-logos/google-2015-seeklogo-removebg-preview.png" 
+                      src="/myPortfolio/assets/company-logos/google-2015-seeklogo-removebg-preview.png" 
                       alt="Google Logo" 
                       className="experience__company-logo"
                     />
@@ -103,7 +103,7 @@ const Experience: React.FC = () => {
                   <h3 className="experience__title">Core Perception Algorithm Developer</h3>
                   <span className="experience__subtitle">
                     <img 
-                      src="/assets/company-logos/ohio-state-university-seal-seeklogo-removebg-preview.png" 
+                      src="/myPortfolio/assets/company-logos/ohio-state-university-seal-seeklogo-removebg-preview.png" 
                       alt="Ohio State University Logo" 
                       className="experience__company-logo"
                     />
@@ -203,7 +203,7 @@ const Experience: React.FC = () => {
                   <h3 className="experience__title">Bachelor of Science in Computer Science and Engineering</h3>
                   <span className="experience__subtitle">
                     <img 
-                      src="/assets/company-logos/ohio-state-university-seal-seeklogo-removebg-preview.png" 
+                      src="/myPortfolio/assets/company-logos/ohio-state-university-seal-seeklogo-removebg-preview.png" 
                       alt="Ohio State University Logo" 
                       className="experience__company-logo"
                     />
@@ -235,7 +235,7 @@ const Experience: React.FC = () => {
                   <h3 className="experience__title">Certificate in Machine Learning</h3>
                   <span className="experience__subtitle">
                     <img 
-                      src="/assets/company-logos/cornell-university-seeklogo-removebg-preview.png" 
+                      src="/myPortfolio/assets/company-logos/cornell-university-seeklogo-removebg-preview.png" 
                       alt="Cornell University Logo" 
                       className="experience__company-logo"
                     />

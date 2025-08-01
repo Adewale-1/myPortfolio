@@ -90,7 +90,7 @@ const Skills: React.FC = () => {
                   <h3 className="skills__name">FastAPI</h3>
                 </div>
               </div>
-              
+
               <div className="skills__data">
                 <div>
                   <h3 className="skills__name">Flask</h3>
@@ -116,7 +116,7 @@ const Skills: React.FC = () => {
                   <h3 className="skills__name">Pytest</h3>
                 </div>
               </div>
-              
+
               <div className="skills__data">
                 <div>
                   <h3 className="skills__name">gRPC</h3>
@@ -142,7 +142,7 @@ const Skills: React.FC = () => {
                   <h3 className="skills__name">Google Firestore</h3>
                 </div>
               </div>
-              
+
               <div className="skills__data">
                 <div>
                   <h3 className="skills__name">Redis</h3>
@@ -154,7 +154,7 @@ const Skills: React.FC = () => {
         
         <div className="skills__content">
           <h3 className="skills__title">DevOps & Infrastructure</h3>
-          
+
           <div className="skills__box">
             <div className="skills__group">
               <div className="skills__data">
@@ -174,7 +174,7 @@ const Skills: React.FC = () => {
                   <h3 className="skills__name">Amazon EC2</h3>
                 </div>
               </div>
-              
+
               <div className="skills__data">
                 <div>
                   <h3 className="skills__name">RabbitMQ</h3>

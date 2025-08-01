@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './about.css';
 import CV from '../../assets/Adenle-CV.pdf';
 import Info from './Info';
 
 const About: React.FC = () => {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowMessage(true);
+    
+    // Hide the message after 10 seconds
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 10000);
+  };
+
   return (
     <section className="about section" id="about">
       <div className="section__header">
@@ -34,7 +46,16 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <a download="" href={CV} className="button button--flex about__button resume-button">
+          {showMessage && (
+            <div className="resume-message">
+              Adewale has disabled this feature. Please send a message below and he will get back to you soon.
+            </div>
+          )}
+
+          <a 
+            onClick={handleResumeClick} 
+            className="button button--flex about__button resume-button disabled-button"
+          >
             Download Resume
             
             <svg

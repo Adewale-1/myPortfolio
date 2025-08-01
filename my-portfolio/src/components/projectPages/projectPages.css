@@ -36,6 +36,23 @@
   padding: 0;
 }
 
+.project-page__header-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hide any text headers appearing in the dark footer area under the image */
+.project-page__header::after {
+  display: none;
+}
+
 [data-theme="dark"] .project-page__header {
   background-color: rgba(18, 18, 18, 0.95);
 }
@@ -64,6 +81,26 @@
   width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+/* Enhanced selectors to hide all headers and text that might appear below the image in the header */
+.project-page__header-logo-full + h2,
+.project-page__header-logo-full + div > h2,
+.project-page__header-logo-full ~ h2:first-of-type,
+.project-page__header-logo-full + .project-page__header-text,
+.project-page__container > h1,
+.project-page__container > h2:not(.project-page__section h2),
+.project-page__container > div:not(.project-page__header-logo-full, .project-page__body) > *,
+.project-page__container div:has(> h1:contains("Google DeepMind")),
+.project-page__container div[class*="google-deepmind"] {
+  display: none !important;
+}
+
+/* Direct styling for the Google DeepMind title that might appear */
+.project-page__header + div h1,
+.project-page__header ~ h1:first-of-type,
+.project-page__container > h1:first-of-type {
+  display: none !important;
 }
 
 .project-page__header h1 {
@@ -149,13 +186,14 @@
   animation-delay: 0.4s;
 }
 
+/* Ensure section headers are always blue primary color with !important flag */
 .project-page__section h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   position: relative;
   padding-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .project-page__section h2::after {
@@ -207,15 +245,6 @@
   color: var(--container-color);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(var(--primary-color-rgb), 0.1);
-}
-
-.project-page__link--secondary {
-  background-color: transparent;
-  border: 1px dashed var(--primary-color);
-}
-
-.project-page__link--secondary:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.05);
 }
 
 .project-page__pdf-container {
@@ -349,85 +378,4 @@
 
 .project-page__back-button i {
   font-size: 1.2rem;
-}
-
-.project-page__container--standalone {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: var(--container-color);
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 10;
-}
-
-.project-page__details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.project-page__detail-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-color-light);
-  font-size: 0.95rem;
-}
-
-.project-page__detail-item i {
-  color: var(--primary-color);
-  font-size: 1.25rem;
-}
-
-.project-page__achievements {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.project-page__achievement {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.project-page__achievement i {
-  font-size: 1.5rem;
-  color: #1a73e8;
-  background-color: rgba(26, 115, 232, 0.1);
-  padding: 0.75rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 3rem;
-  min-height: 3rem;
-}
-
-.project-page__achievement h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: var(--title-color);
-  font-weight: 600;
-}
-
-.project-page__achievement p {
-  color: var(--text-color-light);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-@media screen and (max-width: 576px) {
-  .project-page__achievement {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .project-page__achievement i {
-    margin-bottom: 0.5rem;
-  }
 } 

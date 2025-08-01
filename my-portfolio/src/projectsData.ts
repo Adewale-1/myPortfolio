@@ -9,6 +9,7 @@ export type ProjectType = {
   demo?: string;
   moreImages?: string[];
   readmeContent?: string;
+  directLink?: string;
 };
 
 export const projects: ProjectType[] = [
@@ -18,6 +19,7 @@ export const projects: ProjectType[] = [
     description: 'A modern web-based code editor with integrated AI assistance. CodeOH provides a feature-rich development environment with syntax highlighting, smart code completion, and real-time execution capabilities across multiple programming languages. The system integrates with Google\'s Gemini LLM to provide intelligent code suggestions and powerful semantic search functionality.',
     github: 'https://github.com/addychandrashekar/CodeOH',
     image: '/myPortfolio/assets/codeoh.png',
+    directLink: '/projects/codeoh',
     features: [
       'Multi-language support with syntax highlighting',
       'Integrated AI assistant for code suggestions and problem-solving',
@@ -452,7 +454,7 @@ This contribution extends the pandas-ta library's momentum indicators, providing
     category: 'Software',
     description: 'A computer vision-based indoor navigation system designed for university buildings. IndoorNav uses image recognition to identify landmarks and guide users through complex indoor environments with a mobile-friendly interface and real-time routing.',
     github: 'https://github.com/Adewale-1/IndoorNav',
-    image: '/myPortfolio/assets/png/indoornav.svg',
+    image: '/myPortfolio/assets/indoornav.svg',
     features: [
       'Computer vision-powered location recognition',
       'Waypoint-based navigation system',
@@ -464,7 +466,7 @@ This contribution extends the pandas-ta library's momentum indicators, providing
     ],
     tech: ['Python', 'Flutter', 'TensorFlow', 'Computer Vision', 'Mobile Development', 'Navigation Algorithms'],
     moreImages: [
-      '/myPortfolio/assets/png/indoornav.svg',
+      '/myPortfolio/assets/indoornav.svg',
       '/myPortfolio/assets/images/indoornav-waypoints.svg',
       '/myPortfolio/assets/images/indoornav-phone-mockup.svg'
     ],

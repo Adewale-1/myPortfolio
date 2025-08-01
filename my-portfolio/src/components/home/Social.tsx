@@ -14,7 +14,7 @@ const Social: React.FC = () => {
       </a>
 
       <a 
-        href="www.linkedin.com/in/adewaleadenle" 
+        href="https://www.linkedin.com/in/adewaleadenle/" 
         className="home__social-link" 
         target="_blank"
         rel="noreferrer"

@@ -80,7 +80,7 @@ const IndoorNavProjectDetails: React.FC<IndoorNavProjectDetailsProps> = ({ proje
         <div className="project-details__main-image">
           <object 
             type="image/svg+xml" 
-            data="/assets/images/indoornav-waypoints.svg" 
+            data="/myPortfolio/assets/images/indoornav-waypoints.svg" 
             width="100%" 
             height="500px"
             title="IndoorNav Waypoint System"
@@ -97,7 +97,7 @@ const IndoorNavProjectDetails: React.FC<IndoorNavProjectDetailsProps> = ({ proje
             className="indoornav-svg"
           >
             <img 
-              src="/assets/png/indoornav.svg" 
+              src="/myPortfolio/assets/indoornav.svg" 
               alt={project.title}
               style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
             />
@@ -167,7 +167,7 @@ const IndoorNavProjectDetails: React.FC<IndoorNavProjectDetailsProps> = ({ proje
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
               }}>
                 <img 
-                  src="/assets/indoornav-original.png" 
+                  src="/myPortfolio/assets/indoornav-original.png" 
                   alt="IndoorNav Mobile App"
                   style={{ 
                     width: '100%', 
@@ -178,6 +178,38 @@ const IndoorNavProjectDetails: React.FC<IndoorNavProjectDetailsProps> = ({ proje
                   }}
                 />
               </div>
+            </div>
+          </div>
+          
+          <div className="project-details__section">
+            <h2>
+              <i className="uil uil-video"></i>
+              Demo Video
+            </h2>
+            <div className="project-details__video-container" style={{ 
+              width: '100%', 
+              maxWidth: '600px',
+              margin: '20px auto',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+            }}>
+              <video 
+                controls
+                width="100%" 
+                height="auto"
+                poster="/myPortfolio/assets/indoornav-original.png"
+                style={{ 
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '400px',
+                  objectFit: 'contain'
+                }}
+              >
+                <source src="/myPortfolio/assets/IndoorNav.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
           

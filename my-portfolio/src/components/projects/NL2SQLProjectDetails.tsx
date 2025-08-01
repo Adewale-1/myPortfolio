@@ -80,7 +80,7 @@ const NL2SQLProjectDetails: React.FC<NL2SQLProjectDetailsProps> = ({ project, on
         <div className="project-details__main-image">
           <object 
             type="image/svg+xml" 
-            data="/assets/images/nl2sql-architecture.svg" 
+            data="/myPortfolio/assets/images/nl2sql-architecture.svg" 
             width="100%" 
             height="auto"
             title="NL2SQL Architecture Diagram"
@@ -88,7 +88,7 @@ const NL2SQLProjectDetails: React.FC<NL2SQLProjectDetailsProps> = ({ project, on
             style={{ backgroundColor: '#f8f9fa', borderRadius: '12px' }}
           >
             <img 
-              src="/assets/png/nl2sql.svg" 
+              src="/myPortfolio/assets/png/nl2sql.svg" 
               alt={project.title}
               style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
             />

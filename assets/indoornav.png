@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#2196f3" rx="8" ry="8"/>
+  
+  <!-- Title -->
+  <text x="300" y="80" font-family="Arial" font-size="32" text-anchor="middle" font-weight="bold" fill="white">IndoorNav</text>
+  
+  <!-- Building Outline -->
+  <rect x="100" y="120" width="400" height="200" fill="none" stroke="#ffffff" stroke-width="4" rx="5" ry="5"/>
+  
+  <!-- Rooms in the building -->
+  <rect x="120" y="140" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  <rect x="120" y="220" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  <rect x="240" y="140" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  <rect x="240" y="220" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  <rect x="360" y="140" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  <rect x="360" y="220" width="120" height="80" fill="#bbdefb" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Navigation Path -->
+  <path d="M 130,180 L 180,180 L 180,260 L 300,260 L 300,180 L 420,180" stroke="#ff5722" stroke-width="5" fill="none"/>
+  
+  <!-- Start Point -->
+  <circle cx="130" cy="180" r="10" fill="#4caf50"/>
+  
+  <!-- End Point -->
+  <circle cx="420" cy="180" r="10" fill="#f44336"/>
+  
+  <!-- Waypoints -->
+  <circle cx="180" cy="260" r="8" fill="#ff9800"/>
+  <circle cx="300" cy="260" r="8" fill="#ff9800"/>
+  <circle cx="300" cy="180" r="8" fill="#ff9800"/>
+  
+  <!-- Location Pin Icon -->
+  <g transform="translate(490, 60) scale(0.8)">
+    <path d="M0,0 C-10,0 -20,10 -20,20 C-20,35 0,60 0,60 C0,60 20,35 20,20 C20,10 10,0 0,0 Z" fill="#f44336" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="20" r="8" fill="#ffffff"/>
+  </g>
+  
+  <!-- Mobile Phone Icon -->
+  <g transform="translate(110, 60) scale(0.8)">
+    <rect x="-15" y="-25" width="30" height="50" rx="5" ry="5" fill="#ffffff"/>
+    <rect x="-10" y="-20" width="20" height="35" fill="#2196f3"/>
+    <rect x="-5" y="20" width="10" height="2" rx="1" ry="1" fill="#ffffff"/>
+  </g>
+  
+  <!-- Description -->
+  <text x="300" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="white">
+    Indoor Navigation for OSU Campus
+  </text>
+  
+  <!-- Tags -->
+  <rect x="180" y="370" width="80" height="20" rx="10" ry="10" fill="rgba(255,255,255,0.2)"/>
+  <text x="220" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Flutter</text>
+  
+  <rect x="270" y="370" width="80" height="20" rx="10" ry="10" fill="rgba(255,255,255,0.2)"/>
+  <text x="310" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Python</text>
+  
+  <rect x="360" y="370" width="100" height="20" rx="10" ry="10" fill="rgba(255,255,255,0.2)"/>
+  <text x="410" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="white">TensorFlow</text>
+</svg> 
